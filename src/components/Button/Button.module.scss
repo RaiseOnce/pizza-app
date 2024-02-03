@@ -1,0 +1,27 @@
+@import '../../sass/base';
+
+.btn {
+  border: none;
+  color: $color-white;
+  background-color: $color-main;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: opacity ease 0.3;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.btnSmall {
+  padding: 12px 24px;
+  @include font-size(16px, 20px);
+  font-weight: 400;
+}
+
+.btnBig {
+  padding: 18px 60px;
+  @include font-size(18px, 24px);
+  font-weight: 600;
+  text-transform: uppercase;
+}
