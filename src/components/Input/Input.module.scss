@@ -1,0 +1,10 @@
+@import '../../sass/base';
+
+.input {
+  @include font-size(16px, 16px);
+  font-weight: 400;
+  color: $color-black;
+  border: 1px solid $color-gray-light;
+  border-radius: 10px;
+  padding: 20px;
+}

@@ -1,14 +1,19 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.scss'
 import Button from './components/Button/Button'
+import Input from './components/Input/Input'
 
 function App() {
-  const [count, setCount] = useState(0)
+  // const [counter, setCounter] = useState<number>(0)
+
+  // const addCounter = (e: MouseEvent) => {
+  //   console.log(e)
+  // }
 
   return (
     <div>
       <Button>ss</Button>
+      <Input placeholder="Email" />
     </div>
   )
 }
