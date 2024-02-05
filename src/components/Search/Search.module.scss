@@ -1,0 +1,25 @@
+@import '../../sass/base';
+
+.inputWrapper {
+  position: relative;
+  max-width: 260px;
+  width: 100%;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 30px 16px 44px;
+  @include font-size(14px, 14px);
+  font-weight: 400;
+  border-radius: 10px;
+  border: 1px solid $color-input-border;
+  background-color: $color-input-bg;
+}
+
+.search {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}

@@ -1,0 +1,7 @@
+@import '../../sass/base';
+
+.header {
+  margin: 0;
+  @include font-size(36px, 42px);
+  font-weight: 600;
+}

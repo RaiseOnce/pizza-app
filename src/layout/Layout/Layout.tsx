@@ -10,7 +10,7 @@ const Layout = () => {
       <div className={styles.sidebar}>
         <Sidebar />
       </div>
-      <div className={styles.menu}>
+      <div className={styles.content}>
         <Outlet />
       </div>
     </div>
