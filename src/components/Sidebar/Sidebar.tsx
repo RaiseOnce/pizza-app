@@ -7,7 +7,7 @@ const Sidebar = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
-        <img src="./user.jpeg" alt="user" />
+        <img src="/user.jpeg" alt="user" />
       </div>
 
       <div className={styles.user}>
@@ -23,7 +23,7 @@ const Sidebar = () => {
               `${styles.navItem} ${isActive ? styles.navItemActive : ''}`
             }
           >
-            <img src="./doc.svg" alt="" />
+            <img src="/doc.svg" alt="" />
             <span>Меню</span>
           </NavLink>
           <NavLink
@@ -32,14 +32,14 @@ const Sidebar = () => {
               `${styles.navItem} ${isActive ? styles.navItemActive : ''}`
             }
           >
-            <img src="./bag.svg" alt="" />
+            <img src="/bag.svg" alt="" />
             <span>Корзина</span>
           </NavLink>
         </div>
 
         <Button>
           <div className={styles.btn}>
-            <img className={styles.exit} src="./exit.png" alt="exit" />
+            <img className={styles.exit} src="/exit.png" alt="exit" />
             <span>Выйти</span>
           </div>
         </Button>

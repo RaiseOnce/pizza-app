@@ -1,0 +1,81 @@
+@import '../../sass/base';
+
+.card {
+  display: inline-block;
+  position: relative;
+  max-width: 320px;
+  width: 100%;
+  border-radius: 18px;
+  box-shadow: 18.214px 18.214px 36.429px 0px $color-purple-transperent;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 18px 18px 0 0;
+}
+
+.content {
+  padding: 20px 14px;
+  @include col;
+  gap: 10px;
+}
+
+.header {
+  margin: 0;
+  @include font-size(18px, 18px);
+  font-weight: 600;
+}
+
+.subheader {
+  margin: 0;
+  @include font-size(14px, 14px);
+  font-weight: 400;
+  color: $color-gray-dark;
+}
+
+.price {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  max-width: fit-content;
+  padding: 4px 8px 4px 14px;
+  @include font-size(20px, 20px);
+  font-weight: 400;
+  color: $color-blue-dark;
+  background-color: $color-white;
+  border-radius: 100px;
+  box-shadow: 0px 6.071px 24.286px 0px $color-main-transperent;
+
+  span {
+    color: $color-main;
+  }
+}
+
+.shop {
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  box-shadow: 0px 6.071px 24.286px 0px $color-main-transperent;
+  transition: opacity ease 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.score {
+  position: absolute;
+  top: 140px;
+  left: 14px;
+  max-width: fit-content;
+  padding: 8px;
+  @include row;
+  gap: 4px;
+  background-color: $color-white;
+  border-radius: 100px;
+  box-shadow: 0px 6.071px 24.286px 0px $color-main-transperent;
+}
