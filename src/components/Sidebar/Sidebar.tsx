@@ -1,11 +1,9 @@
 import React from 'react'
 import styles from './Sidebar.module.scss'
 import Button from '../Button/Button'
-import { Link, useLocation } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 const Sidebar = () => {
-  const location = useLocation()
-
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
@@ -19,24 +17,24 @@ const Sidebar = () => {
 
       <div className={styles.nav}>
         <div className={styles.navItems}>
-          <Link
+          <NavLink
             to="/"
-            className={`${styles.navItem} ${
-              location.pathname === '/' ? styles.navItemActive : ''
-            }`}
+            className={({ isActive }) =>
+              `${styles.navItem} ${isActive ? styles.navItemActive : ''}`
+            }
           >
             <img src="./doc.svg" alt="" />
             <span>Меню</span>
-          </Link>
-          <Link
+          </NavLink>
+          <NavLink
             to="/cart"
-            className={`${styles.navItem} ${
-              location.pathname === '/cart' ? styles.navItemActive : ''
-            }`}
+            className={({ isActive }) =>
+              `${styles.navItem} ${isActive ? styles.navItemActive : ''}`
+            }
           >
             <img src="./bag.svg" alt="" />
             <span>Корзина</span>
-          </Link>
+          </NavLink>
         </div>
 
         <Button>
