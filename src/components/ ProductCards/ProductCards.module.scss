@@ -1,1 +1,12 @@
 @import '../../sass/base';
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: 1440px) {
+    justify-content: center;
+  }
+}

@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import styles from './Menu.module.scss'
 import Header from '../../components/Header/Header'
 import Search from '../../components/Search/Search'
 import ProductCards from '../../components/ ProductCards/ProductCards'
 import { PREFIX } from '../../api/API'
 import { ProductProps } from '../../types'
-import axios, { Axios, AxiosError } from 'axios'
+import axios, { AxiosError } from 'axios'
 
 const Menu = () => {
   const [products, setProducts] = useState<ProductProps[]>([])
@@ -38,9 +37,13 @@ const Menu = () => {
         <Header>Меню</Header>
         <Search placeholder="Введите блюдо или состав" />
       </div>
-      <div className={styles.products}>
-        {error && <h1>Error: {error}</h1>}
-        {isLoading ? <h1>Loading...</h1> : <ProductCards products={products} />}
+      <div>
+        {error && <h1 className={styles.header}>Error: {error}</h1>}
+        {isLoading ? (
+          <h1 className={styles.header}>Loading...</h1>
+        ) : (
+          <ProductCards products={products} />
+        )}
       </div>
     </div>
   )
