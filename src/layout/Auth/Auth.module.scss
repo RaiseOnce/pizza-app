@@ -1,0 +1,29 @@
+@import '../../sass/base';
+
+.containerInner {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  padding: 86px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100vh;
+  border-right: 1px solid $color-border;
+}
+
+.logo {
+  max-width: 362px;
+  width: 100%;
+  height: auto;
+  display: inline-block;
+}
+
+.content {
+  padding: 86px;
+  width: 50%;
+}
