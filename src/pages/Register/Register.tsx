@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { FormEvent } from 'react'
 import styles from './Register.module.scss'
 import Header from '../../components/Header/Header'
 import Input from '../../components/Input/Input'

@@ -50,3 +50,10 @@
     cursor: pointer;
   }
 }
+
+.error {
+  display: inline-block;
+  background-color: $color-red;
+  color: $color-white;
+  padding: 20px;
+}
