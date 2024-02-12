@@ -39,3 +39,7 @@ export interface ProductProps {
 export interface ProductCards {
   products: ProductProps[]
 }
+
+export interface LoginResponse {
+  access_token: string
+}

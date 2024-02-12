@@ -3,7 +3,7 @@ import styles from './Sidebar.module.scss'
 import Button from '../Button/Button'
 import { NavLink } from 'react-router-dom'
 
-const Sidebar = () => {
+const Sidebar = ({ logout }: { logout: () => void }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.img}>
@@ -37,7 +37,7 @@ const Sidebar = () => {
           </NavLink>
         </div>
 
-        <Button>
+        <Button onClick={logout}>
           <div className={styles.btn}>
             <img className={styles.exit} src="/exit.png" alt="exit" />
             <span>Выйти</span>
