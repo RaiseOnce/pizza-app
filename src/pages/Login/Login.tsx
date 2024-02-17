@@ -7,6 +7,9 @@ import { Link, useNavigate } from 'react-router-dom'
 import axios, { AxiosError } from 'axios'
 import { PREFIX } from '../../api/API'
 import { LoginResponse } from '../../types'
+import { useDispatch } from 'react-redux'
+import { AppDispatch } from '../../store/store'
+import { userActions } from '../../store/user.slice'
 
 interface LoginForm {
   email: string
@@ -22,6 +25,7 @@ const Login = () => {
   })
 
   const navigate = useNavigate()
+  const dispatch = useDispatch<AppDispatch>()
 
   const sendLogin = async (email: string, password: string) => {
     try {
@@ -29,7 +33,7 @@ const Login = () => {
         email,
         password,
       })
-      localStorage.setItem('jwt', data.access_token)
+      dispatch(userActions.addJwt(data.access_token))
       navigate('/')
     } catch (e) {
       if (e instanceof AxiosError) {
